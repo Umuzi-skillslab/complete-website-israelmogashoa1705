@@ -1,21 +1,21 @@
-/* ===== GENERAL ===== */
+/* ===== GENERAL STYLING ===== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #f4f4f4;
+    background-color: #f4f4f4;
     color: #222;
 }
 
 /* ===== HEADER ===== */
 header {
-    background: #333;
-    color: #fff;
+    background-color: #333;
+    color: white;
     padding: 15px;
 }
 
 /* ===== NAVIGATION ===== */
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
@@ -25,7 +25,7 @@ nav li {
 }
 
 nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
@@ -36,16 +36,27 @@ nav a:hover {
 
 /* ===== PROFILE IMAGE ===== */
 .profile-img {
-    width: 200px;
+    width: 200px;   /* Resize profile photo */
     height: auto;
-    display: block;
-    margin: 20px 0; /* keeps it under heading (left aligned) */
+    display: block;  /* Keeps it under heading */
+    margin: 20px 0;
     border-radius: 50%;
 }
 
-/* Hover effect for image */
+/* Hover effect for profile image */
 .profile-img:hover {
     transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* ===== SKILLS/TOOLS IMAGE ===== */
+.skills-img {
+    width: 250px;   /* Adjust size as needed */
+    height: auto;
+    display: block;  /* Keeps it under heading */
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* ===== TABLE STYLING (ENHANCED) ===== */
@@ -78,7 +89,7 @@ tbody tr:nth-child(even) {
     background-color: #f5faff;
 }
 
-/* Hover effect */
+/* Hover effect on rows */
 tbody tr:hover {
     background-color: #d6ebff;
     transition: 0.3s;
