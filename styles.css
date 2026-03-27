@@ -36,30 +36,29 @@ nav a:hover {
 
 /* ===== PROFILE IMAGE ===== */
 .profile-img {
-    width: 200px;   /* Resize profile photo */
+    width: 200px;
     height: auto;
-    display: block;  /* Keeps it under heading */
+    display: block;
     margin: 20px 0;
     border-radius: 50%;
 }
 
-/* Hover effect for profile image */
 .profile-img:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
 
-/* ===== SKILLS/TOOLS IMAGE ===== */
+/* ===== SKILLS IMAGE ===== */
 .skills-img {
-    width: 250px;   /* Adjust size as needed */
+    width: 250px;
     height: auto;
-    display: block;  /* Keeps it under heading */
+    display: block;
     margin: 15px 0;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* ===== TABLE STYLING (ENHANCED) ===== */
+/* ===== TABLE STYLING ===== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -70,7 +69,6 @@ table {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Table header */
 th {
     background: linear-gradient(to right, #0077cc, #005fa3);
     color: #fff;
@@ -78,19 +76,53 @@ th {
     text-align: left;
 }
 
-/* Table cells */
 td {
     padding: 12px;
     border-bottom: 1px solid #ddd;
 }
 
-/* Alternating rows */
 tbody tr:nth-child(even) {
     background-color: #f5faff;
 }
 
-/* Hover effect on rows */
 tbody tr:hover {
     background-color: #d6ebff;
     transition: 0.3s;
+}
+
+/* ===== PROJECTS LAYOUT ===== */
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Project cards */
+.project-card {
+    background-color: #ffffff;
+    width: 300px;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Project images */
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Hover effect (IMPORTANT) */
+.project-card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Project titles */
+.project-card h2 {
+    color: #0077cc;
 }
