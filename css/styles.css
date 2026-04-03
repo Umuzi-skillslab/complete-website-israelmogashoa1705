@@ -1,45 +1,90 @@
-/* ===== GENERAL STYLING ===== */
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     background-color: #f4f4f4;
     color: #222;
+    line-height: 1.6;
 }
 
 /* ===== HEADER ===== */
 header {
     background-color: #333;
-    color: white;
-    padding: 15px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
 /* ===== NAVIGATION ===== */
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    margin-top: 10px;
 }
 
 nav li {
-    display: inline;
-    margin-right: 15px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
     color: #ffcc00;
 }
 
-/* ===== PROFILE IMAGE ===== */
-.profile-img {
-    width: 200px;
+/* ===== MAIN CONTENT ===== */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* ===== SECTIONS ===== */
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== HEADINGS ===== */
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+/* ===== IMAGES ===== */
+img {
+    max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px 0;
+}
+
+/* HERO IMAGE */
+.hero-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
     border-radius: 50%;
+    margin: 10px auto;
 }
 
 .profile-img:hover {
@@ -47,106 +92,97 @@ nav a:hover {
     transition: 0.3s;
 }
 
-/* ===== SKILLS IMAGE ===== */
+/* SKILLS IMAGE */
 .skills-img {
-    width: 250px;
-    height: auto;
-    display: block;
-    margin: 15px 0;
+    width: 200px;
+    margin-top: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-<<<<<<< HEAD
-/* ===== SKILLS IMAGE ===== */
-.skills-img {
-    width: 250px;
-    height: auto;
-    display: block;
-    margin: 15px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* PROJECT IMAGES */
+main section img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 10px 0;
 }
 
-=======
->>>>>>> e54df6d (Save current work before pulling remote changes)
-/* ===== TABLE STYLING ===== */
+/* ===== TABLE ===== */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
 }
 
 th {
-    background: linear-gradient(to right, #0077cc, #005fa3);
+    background: #0077cc;
     color: #fff;
-    padding: 12px;
-    text-align: left;
+    padding: 10px;
 }
 
 td {
-    padding: 12px;
+    padding: 10px;
     border-bottom: 1px solid #ddd;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f5faff;
+/* ===== FORM ===== */
+form {
+    margin-top: 10px;
 }
 
-tbody tr:hover {
-    background-color: #d6ebff;
-    transition: 0.3s;
-}
-
-/* ===== PROJECTS LAYOUT ===== */
-.projects-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-<<<<<<< HEAD
-=======
-/* Project cards */
->>>>>>> e54df6d (Save current work before pulling remote changes)
-.project-card {
-    background-color: #ffffff;
-    width: 300px;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-<<<<<<< HEAD
-=======
-/* Project images */
->>>>>>> e54df6d (Save current work before pulling remote changes)
-.project-card img {
+input, select, textarea {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-<<<<<<< HEAD
-=======
-/* Hover effect (IMPORTANT) */
->>>>>>> e54df6d (Save current work before pulling remote changes)
-.project-card:hover {
-    transform: translateY(-5px);
-    transition: 0.3s;
+textarea {
+    min-height: 100px;
 }
 
-<<<<<<< HEAD
-=======
-/* Project titles */
->>>>>>> e54df6d (Save current work before pulling remote changes)
-.project-card h2 {
-    color: #0077cc;
+/* RADIO & CHECKBOX */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* BUTTON */
+button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ffcc00;
+    color: #000;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
 }
