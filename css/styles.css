@@ -37,12 +37,11 @@ nav a {
     font-weight: bold;
 }
 
-/* hover pseudo-class (already required) */
 nav a:hover {
     color: #ffcc00;
 }
 
-/* ===== ACTIVE PAGE (NEW - RUBRIC) ===== */
+/* ===== ACTIVE PAGE INDICATOR ===== */
 .active {
     color: #ffcc00;
     text-decoration: underline;
@@ -108,6 +107,19 @@ img {
     transition: 0.3s;
 }
 
+/* ===== NEW: CENTER FIGURE CONTENT ===== */
+figure {
+    text-align: center;
+}
+
+/* ===== NEW: FIGCAPTION (your request) ===== */
+figcaption {
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+    color: #555;
+}
+
 /* SKILLS IMAGE */
 .skills-img {
     width: 200px;
@@ -133,7 +145,7 @@ td {
     border-bottom: 1px solid #ddd;
 }
 
-/* ===== RUBRIC REQUIREMENT: ALTERNATING ROW COLOURS ===== */
+/* ===== ALTERNATING ROW COLOURS (RUBRIC) ===== */
 tbody tr:nth-child(odd) {
     background-color: #ffffff;
 }
@@ -162,14 +174,14 @@ textarea {
     min-height: 100px;
 }
 
-/* radio + checkbox */
+/* RADIO & CHECKBOX */
 input[type="radio"],
 input[type="checkbox"] {
     width: auto;
     margin-right: 5px;
 }
 
-/* ===== RUBRIC REQUIREMENT: SUCCESS MESSAGE CLASS ===== */
+/* ===== SUCCESS MESSAGE (RUBRIC FIX) ===== */
 .success-message {
     display: none;
     background: #d4edda;
@@ -180,7 +192,7 @@ input[type="checkbox"] {
     margin-bottom: 15px;
 }
 
-/* ===== RUBRIC REQUIREMENT: SECOND PSEUDO-CLASS (:focus) ===== */
+/* ===== PSEUDO-CLASS REQUIREMENT ===== */
 input:focus,
 select:focus,
 textarea:focus,
@@ -199,7 +211,6 @@ button {
     cursor: pointer;
 }
 
-/* hover pseudo-class already used */
 button:hover {
     background: #ffcc00;
     color: #000;
