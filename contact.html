@@ -28,14 +28,21 @@
     <section>
         <h2>Get In Touch</h2>
 
+        <!-- SUCCESS MESSAGE -->
         <div id="success-message" class="success-message">
             ✓ Your message has been sent successfully!
         </div>
 
         <form onsubmit="return showMessage()">
 
+            <!-- ✅ NAME FIELD WITH VALIDATION (OPTION 1 FIX) -->
             <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+            <input type="text"
+                   id="name"
+                   name="name"
+                   required
+                   pattern="[A-Za-z ]+"
+                   title="Name must only contain letters and spaces"><br><br>
 
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br><br>
