@@ -1,0 +1,36 @@
+/* ===== GENERAL STYLING ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+/* ===== NAVIGATION ===== */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover effect (REQUIRED) */
+nav ul li a:hover {
+    color: #ffcc00;
+}

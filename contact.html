@@ -1,30 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Israel Mogashoa for web development inquiries and collaboration opportunities.">
     <title>Contact</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="header">
-        <h1>Contact Me</h1>
+
+<header>
+    <h1>Contact Me</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section>
+    <h2>Get In Touch</h2>
+
+    <!-- SUCCESS MESSAGE -->
+    <div id="success-message" class="success-message">
+        ✓ Your message has been sent successfully!
     </div>
-    
-    <div>
-        <h2>Get In Touch</h2>
-        
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            
-            <!-- Missing: labels, more input types, validation -->
-            
-            <button>Send</button>
-        </form>
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
+
+    <form onsubmit="return showMessage()">
+
+        <!-- NAME FIELD (LIVE VALIDATION) -->
+        <label for="name">Name:</label><br>
+        <input type="text"
+               id="name"
+               name="name"
+               required
+               pattern="[A-Za-z ]+"
+               title="Only letters and spaces allowed"
+               oninput="validateName()">
+
+        <p id="name-error" style="color:red; display:none;">
+            Only letters and spaces are allowed
+        </p>
+
+        <br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="service">Service:</label><br>
+        <select id="service" name="service" required>
+            <option value="">Choose one</option>
+            <option>Web Design</option>
+            <option>Branding</option>
+        </select><br><br>
+
+        <p>Budget:</p>
+        <label><input type="radio" name="budget" required> Low</label>
+        <label><input type="radio" name="budget"> Medium</label>
+        <label><input type="radio" name="budget"> High</label>
+
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="subscribe"> Subscribe to updates
+        </label>
+
+        <br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea>
+
+        <br><br>
+
+        <button type="submit">Send</button>
+
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>Email: israelmogashoa@gmail.com</p>
+</footer>
+
+<script>
+function showMessage() {
+    document.getElementById("success-message").style.display = "block";
+    return false;
+}
+
+function validateName() {
+    const name = document.getElementById("name");
+    const error = document.getElementById("name-error");
+
+    const pattern = /^[A-Za-z ]+$/;
+
+    if (name.value === "") {
+        error.style.display = "none";
+        name.style.border = "1px solid #ccc";
+        return;
+    }
+
+    if (!pattern.test(name.value)) {
+        error.style.display = "block";
+        name.style.border = "2px solid red";
+    } else {
+        error.style.display = "none";
+        name.style.border = "2px solid green";
+    }
+}
+</script>
+
 </body>
 </html>
