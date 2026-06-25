@@ -25,57 +25,64 @@
 
 <main>
 
-    <section>
-        <h2>Get In Touch</h2>
+<section>
+    <h2>Get In Touch</h2>
 
-        <!-- SUCCESS MESSAGE -->
-        <div id="success-message" class="success-message">
-            ✓ Your message has been sent successfully!
-        </div>
+    <!-- SUCCESS MESSAGE -->
+    <div id="success-message" class="success-message">
+        ✓ Your message has been sent successfully!
+    </div>
 
-        <form onsubmit="return showMessage()">
+    <form onsubmit="return showMessage()">
 
-            <!-- ✅ NAME FIELD WITH VALIDATION (OPTION 1 FIX) -->
-            <label for="name">Name:</label><br>
-            <input type="text"
-                   id="name"
-                   name="name"
-                   required
-                   pattern="[A-Za-z ]+"
-                   title="Name must only contain letters and spaces"><br><br>
+        <!-- NAME FIELD (LIVE VALIDATION) -->
+        <label for="name">Name:</label><br>
+        <input type="text"
+               id="name"
+               name="name"
+               required
+               pattern="[A-Za-z ]+"
+               title="Only letters and spaces allowed"
+               oninput="validateName()">
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+        <p id="name-error" style="color:red; display:none;">
+            Only letters and spaces are allowed
+        </p>
 
-            <label for="service">Service:</label><br>
-            <select id="service" name="service" required>
-                <option value="">Choose one</option>
-                <option>Web Design</option>
-                <option>Branding</option>
-            </select><br><br>
+        <br><br>
 
-            <p>Budget:</p>
-            <label><input type="radio" name="budget" required> Low</label>
-            <label><input type="radio" name="budget"> Medium</label>
-            <label><input type="radio" name="budget"> High</label>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
 
-            <br><br>
+        <label for="service">Service:</label><br>
+        <select id="service" name="service" required>
+            <option value="">Choose one</option>
+            <option>Web Design</option>
+            <option>Branding</option>
+        </select><br><br>
 
-            <label>
-                <input type="checkbox" name="subscribe"> Subscribe to updates
-            </label>
+        <p>Budget:</p>
+        <label><input type="radio" name="budget" required> Low</label>
+        <label><input type="radio" name="budget"> Medium</label>
+        <label><input type="radio" name="budget"> High</label>
 
-            <br><br>
+        <br><br>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required></textarea>
+        <label>
+            <input type="checkbox" name="subscribe"> Subscribe to updates
+        </label>
 
-            <br><br>
+        <br><br>
 
-            <button type="submit">Send</button>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea>
 
-        </form>
-    </section>
+        <br><br>
+
+        <button type="submit">Send</button>
+
+    </form>
+</section>
 
 </main>
 
@@ -84,10 +91,31 @@
 </footer>
 
 <script>
-    function showMessage() {
-        document.getElementById("success-message").style.display = "block";
-        return false;
+function showMessage() {
+    document.getElementById("success-message").style.display = "block";
+    return false;
+}
+
+function validateName() {
+    const name = document.getElementById("name");
+    const error = document.getElementById("name-error");
+
+    const pattern = /^[A-Za-z ]+$/;
+
+    if (name.value === "") {
+        error.style.display = "none";
+        name.style.border = "1px solid #ccc";
+        return;
     }
+
+    if (!pattern.test(name.value)) {
+        error.style.display = "block";
+        name.style.border = "2px solid red";
+    } else {
+        error.style.display = "none";
+        name.style.border = "2px solid green";
+    }
+}
 </script>
 
 </body>
