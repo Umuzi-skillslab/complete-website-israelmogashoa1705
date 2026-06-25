@@ -7,81 +7,81 @@
     <title>Contact</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Contact Me</h1>
+<header>
+    <h1>Contact Me</h1>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
+<main>
 
-        <section>
-            <h2>Get In Touch</h2>
+    <section>
+        <h2>Get In Touch</h2>
 
-            <!-- SUCCESS MESSAGE (hidden by default) -->
-            <div id="success-message"
-                 style="display:none; background:#d4edda; color:#155724;
-                 padding:10px; border:1px solid #c3e6cb;
-                 border-radius:5px; margin-bottom:15px;">
-                ✓ Your message has been sent successfully!
-            </div>
+        <div id="success-message" class="success-message">
+            ✓ Your message has been sent successfully!
+        </div>
 
-            <form onsubmit="return showMessage()">
+        <form onsubmit="return showMessage()">
 
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
 
-                <label for="service">Service:</label><br>
-                <select id="service" name="service" required>
-                    <option value="">Choose one</option>
-                    <option>Web Design</option>
-                    <option>Branding</option>
-                </select><br><br>
+            <label for="service">Service:</label><br>
+            <select id="service" name="service" required>
+                <option value="">Choose one</option>
+                <option>Web Design</option>
+                <option>Branding</option>
+            </select><br><br>
 
-                <p>Budget:</p>
-                <label><input type="radio" name="budget" required> Low</label>
-                <label><input type="radio" name="budget"> Medium</label>
-                <label><input type="radio" name="budget"> High</label>
-                <br><br>
+            <p>Budget:</p>
+            <label><input type="radio" name="budget" required> Low</label>
+            <label><input type="radio" name="budget"> Medium</label>
+            <label><input type="radio" name="budget"> High</label>
 
-                <label>
-                    <input type="checkbox"> Subscribe to updates
-                </label>
-                <br><br>
+            <br><br>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" required></textarea>
-                <br><br>
+            <label>
+                <input type="checkbox" name="subscribe"> Subscribe to updates
+            </label>
 
-                <button type="submit">Send</button>
+            <br><br>
 
-            </form>
-        </section>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea>
 
-    </main>
+            <br><br>
 
-    <footer>
-        <p>Email: israelmogashoa@gmail.com</p>
-    </footer>
+            <button type="submit">Send</button>
 
-    <script>
-        function showMessage() {
-            document.getElementById("success-message").style.display = "block";
-            return false; // prevents page reload so message stays visible
-        }
-    </script>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>Email: israelmogashoa@gmail.com</p>
+</footer>
+
+<script>
+    function showMessage() {
+        document.getElementById("success-message").style.display = "block";
+        return false;
+    }
+</script>
 
 </body>
 </html>
